@@ -28,7 +28,6 @@ Skills
 ======
 * Natural Language Processing
 * Machine Learning
-* Large Language Models
 * LLM Reasoning and Reinforcement Learning
 * Vision-Language Models
 * LLM Truthfulness and Interpretability
