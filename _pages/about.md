@@ -29,6 +29,14 @@ My research focuses on natural language processing and machine learning. I am pa
 - **Research Intern**, Shanghai AI Lab, June 2023–December 2023
   - Advisor: Prof. Yu Cheng
 
+## Selected Publications
+
+<ul>{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}</ul>
+
+More details are available on the [publications page](/publications/).
+
 ## Contact
 
 - Email: [jliugi@connect.ust.hk](mailto:jliugi@connect.ust.hk)
