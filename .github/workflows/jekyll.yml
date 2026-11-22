@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages-deploy-v2"
+  group: "pages-deploy-v3"
   cancel-in-progress: true
 
 jobs:
@@ -48,6 +48,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-24.04
     needs: build
     steps:
