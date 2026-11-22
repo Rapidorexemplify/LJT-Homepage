@@ -9,7 +9,7 @@ redirect_from:
 
 ## About
 
-Junteng Liu is a first-year PhD candidate at the [HKUST NLP Group](https://hkust-nlp.github.io/), supervised by Professor [Junxian He](https://github.com/JunxianHe123). He graduated from Shanghai Jiao Tong University (SJTU) in June 2024. His research focuses on natural language processing and machine learning, including LLM reasoning and reinforcement learning, hallucination in vision-language models, and LLM truthfulness and interpretability.
+Junteng Liu is a first-year PhD candidate at the HKUST NLP Group, supervised by Professor Junxian He. He graduated from Shanghai Jiao Tong University (SJTU) in June 2024. His research focuses on natural language processing and machine learning, including LLM reasoning and reinforcement learning, hallucination in vision-language models, and LLM truthfulness and interpretability.
 
 ## Academic Background
 
