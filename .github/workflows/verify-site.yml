@@ -1,0 +1,28 @@
+name: Verify live site
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check live homepage and publications page
+        run: |
+          set -euo pipefail
+          homepage="https://rapidorexemplify.github.io/LJT-Homepage/"
+          pubs="https://rapidorexemplify.github.io/LJT-Homepage/publications/"
+          code=$(curl -L -s -o /tmp/home.html -w "%{http_code}" "$homepage")
+          echo "HOME_STATUS=$code"
+          test "$code" = "200"
+          for text in "Junteng Liu" "Academic Background" "Research Experience" "Skills and Research Expertise" "SynLogic" "Contact Information"; do
+            grep -Fq "$text" /tmp/home.html
+            echo "FOUND_HOME: $text"
+          done
+          code=$(curl -L -s -o /tmp/pubs.html -w "%{http_code}" "$pubs")
+          echo "PUBS_STATUS=$code"
+          test "$code" = "200"
+          for text in "SynLogic" "Perception Bottleneck" "Universal Truthfulness Hyperplane" "In-Context Sharpness" "C-Eval" "Composing Parameter-Efficient Modules"; do
+            grep -Fq "$text" /tmp/pubs.html
+            echo "FOUND_PUB: $text"
+          done
