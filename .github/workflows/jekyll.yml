@@ -7,11 +7,12 @@ on:
 
 permissions:
   contents: read
+  deployments: write
   pages: write
   id-token: write
 
 concurrency:
-  group: "pages-deploy-v3"
+  group: "pages-deploy-v4"
   cancel-in-progress: true
 
 jobs:
@@ -50,7 +51,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-24.04
     needs: build
     steps:
